@@ -1,0 +1,243 @@
+//main: ../style.scss
+.btn {
+  -moz-user-select: none;
+  -ms-touch-action: manipulation;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  background-color: transparent;
+  background-image: none;
+  border-color: transparent;
+  border-radius: 0;
+  border-style: solid;
+  border-width: 1px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: $typo_base_size;
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 0;
+  padding: .75rem 1.25rem;
+  text-align: center;
+  text-decoration: none;
+  touch-action: manipulation;
+  user-select: none;
+  white-space: nowrap;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:active {
+    position:relative;
+    top: 1px;
+  }
+}
+
+.btn-lg {
+  font-size: 125%;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 1.25rem 1.75rem;
+  text-transform: uppercase;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.btn-link {
+  background-color: transparent;
+  box-shadow: none;
+  color: $color_brand_main;
+}
+
+.btn-video {
+  padding: 0;
+  position: relative;
+
+  &::before {
+    border-color: transparent transparent transparent $color_brand_accent;
+    border-style: solid;
+    border-width: 32px 0 32px 64px;
+    content: '';
+    display: block;
+    height: 64px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 32px);
+    transform: translateY(-50%);
+    width: 64px;
+    z-index: 2;
+  }
+}
+
+.btn-primary {
+  color: $color_lighter;
+  border-color: $color_brand_secondary;
+  background-color: $color_brand_secondary;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $color_lighter;
+    border-color: darken($color_brand_secondary, 10%);
+    background-color: darken($color_brand_secondary, 10%);
+  }
+}
+
+.btn-bordered-primary {
+  color: $color_brand_secondary;
+  border-color: $color_brand_secondary;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: darken($color_brand_secondary,5%);
+    background-color: rgba($color_brand_secondary,.1);
+  }
+}
+
+.btn-default {
+  color: $color_brand_main;
+  border-color: $color_brand_main;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: darken($color_brand_main,5%);
+    background-color: rgba($color_brand_secondary,.1);
+  }
+}
+
+.btn-bordered-light {
+  color: $color_lighter;
+  border-color: $color_lighter;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $color_lighter;
+    background-color: rgba(0,0,0,.16);
+  }
+}
+
+.btn-bordered-dark {
+  color: $color_brand_dark;
+  border-color: $color_brand_dark;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $color_brand_dark;
+    background-color: rgba(0,0,0,.16);
+  }
+}
+
+// scroll-up
+#scroll-up {
+  display: inline-block;
+  background-color: $color_brand_accent;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: $radius_full;
+  position: fixed;
+  bottom: 72px;
+  right: 30px;
+  transition: background-color .3s, opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  border: 0;
+  text-indent: 100px;
+  overflow: hidden;
+
+
+  &::after {
+    border-color: transparent transparent $color_brand_dark transparent;
+    border-style: solid;
+    border-width: 0 10px 16px 10px;
+    content: '';
+    display: block;
+    height: 16px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 10px);
+    transform: translateY(-60%);
+    width: 16px;
+    z-index: 1;
+  }
+  &:hover {
+    cursor: pointer;
+    background-color: darken($color_brand_accent, 15%);
+  }
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+// close
+.close {
+  $size: 32px;
+  height: $size;
+  width: $size;
+  position: absolute;
+  top: 0;
+  right: 0;
+  box-sizing: border-box;
+  line-height: $size;
+  display: inline-block;
+  background-color: transparent;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  margin: 4px;
+
+  &:before, &:after {
+    $height: 2px;
+    $width: 24px;
+    background-color: $color_brand_dark;
+    content: '';
+    display: block;
+    height: $height;
+    left: 50%;
+    margin-left: -$width/2;
+    margin-top: -$height/2;
+    position: absolute;
+    top: 50%;
+    transform: rotate(-45deg);
+    transition: all 0.25s ease-out;
+    width: $width;
+  }
+
+  &:after {
+    transform: rotate(-135deg);
+  }
+
+  &:hover {
+
+    &:before, &:after {
+      transform: rotate(0deg);
+    }
+  }
+}
+
+// caret
+.btn .caret {
+  margin-left: 0;
+}
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 4px dashed;
+  border-top: 4px solid\9;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}

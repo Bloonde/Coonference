@@ -1,0 +1,79 @@
+// main: ../style.scss
+
+.header-main {
+  background-color: $color_brand_main;
+  
+  .navbar-top,
+  .navbar-bottom,
+  .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    
+    @media (max-width: $tablet) {
+      flex-flow: column nowrap;
+    }
+  }
+  
+  .navbar-top {
+    justify-content: space-between;
+    align-items: center;
+    
+    @media (min-width: $tablet) {
+      
+      &::after {
+        background-color: $color_brand_dark;
+        content: '';
+        height: 1px;
+        position: absolute;
+        top: 4rem;
+        width: 5000px;
+        left: 162px;
+      }
+    }
+  }
+  
+  .navbar-bottom {
+    justify-content: flex-end;
+  }
+  
+  .navbar-nav {
+    list-style: none;
+    justify-content: flex-end;
+    padding: 0;
+
+    @media (max-width: $tablet) {
+      display: none;
+      width: 100%;
+      margin: 0;
+      background: $color_brand_dark;
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    &.active {
+      display: block;
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      transition: all 0.5s ease-in-out;
+    }
+  }
+  
+  .navbar-brand {
+    display: block;
+    margin-top: 2.5rem;
+    width: 162px;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: $tablet) {
+  
+  .navbar-header {
+    width: 100%;
+   }
+   .header-main .navbar-brand {
+    margin-top: 1rem;
+   }
+  
+}

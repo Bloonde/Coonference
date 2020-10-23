@@ -1,0 +1,21 @@
+// main: ../style.scss
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+.danger { color: $color_danger; }
+.success { color: $color_success; }
+.info { color: $color_info; }
+.warning { color: $color_warning; }
+
+.disabled { opacity: .44; }
+
+.text-muted { opacity: .8; }

@@ -1,0 +1,29 @@
+// main: ../style.scss
+
+.icon {
+  display: inline-block;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+  vertical-align: middle;
+  position: relative;
+  white-space: nowrap;
+  flex: 0 0 auto;
+  // align-self: first baseline;
+}
+
+.icon-sm {
+  width: 24px;
+  height: 24px;
+}
+
+.icon-md {
+  width: 48px;
+  height: 48px;
+}
+
+// .icon-name {
+  //   font-size: 32px;
+  //   color: red;
+  // }
+  

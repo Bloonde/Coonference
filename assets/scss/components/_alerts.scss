@@ -1,0 +1,47 @@
+//main: ../style.scss
+
+.alert {
+  padding: 8px 16px;
+  margin-bottom: 20px;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 1px 1px 1px 4px;
+  padding-right: 35px;
+}
+
+.alert-warning {
+  background-color: lighten($color_warning, 33%);
+  border-color: $color_warning;
+  color: $color_base;
+}
+
+.alert-info {
+  background-color: lighten($color_info, 33%);
+  border-color: $color_info;
+  color: $color_base;
+}
+
+.alert-danger {
+  background-color: lighten($color_danger, 33%);
+  border-color: $color_danger;
+  color: $color_base;
+}
+
+.alert-success {
+  background-color: lighten($color_success, 33%);
+  border-color: $color_success;
+  color: $color_base;
+}
+
+#cookie-alert {
+  display: none;
+  background-color: $color_warning;
+}
+
+.dropdown-menu .alert {
+	display: block;
+	margin: 0;
+	color: $color_brand_accent;
+  font-weight: 500;
+  padding: 8px 16px;
+}

@@ -1,0 +1,176 @@
+// main: ../style.scss
+
+.navbar-nav  {
+  margin: 0;
+
+  .dropdown-toggle {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    text-decoration: none;
+    background-color: transparent;
+    color: $color_lighter;
+    padding: 8px 16px;
+    font-size: 14px;
+    position: relative;
+
+    .subject {
+      margin: 0 4px;
+    }
+  }
+
+  .btn-link {
+    color: $color_light;
+
+    &:hover {
+      color: $color_lighter;
+    }
+  }
+
+  & > .menu-item > a {
+    text-decoration: none;
+    display: inline-block;
+    color: $color_lighter;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-align: center;
+    padding: 8px 16px;
+    text-transform: uppercase;
+    position: relative;
+
+    @media (max-width: $tablet) {
+      text-align: left;
+      display: block;
+    }
+
+    &::after {
+      background: none repeat scroll 0 0 transparent;
+      bottom: 0;
+      content: '';
+      display: block;
+      height: 2px;
+      left: 50%;
+      position: absolute;
+      background: $color_brand_accent;
+      transition: width 0.3s ease 0s, left 0.3s ease 0s;
+      width: 0;
+    }
+    &:hover::after {
+      width: 100%;
+      left: 0;
+    }
+
+    &:hover {
+      color: $color_brand_accent;
+    }
+  }
+}
+
+.dropdown, .dropup {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 1;
+  display: none;
+  min-width: 158px;
+  padding: 5px 0;
+  margin: 0;
+  font-size: 14px;
+  text-align: left;
+  list-style: none;
+  background-color: $color_brand_dark;
+  background-clip: padding-box;
+  box-shadow: $shadow_medium;
+
+  & > li > a {
+    display: block;
+    padding: 8px 16px;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.5;
+    color: $color_lighter;
+    white-space: nowrap;
+    text-decoration: none;
+
+    @media (max-width: $tablet) {
+      display: block;
+      text-align: left;
+    }
+
+    &:hover {
+      background-color: lighten($color_brand_dark, 8%);
+    }
+  }
+
+  form {
+    padding: 16px;
+    color: $color_lighter;
+  }
+
+  .divider {
+    height: 1px;
+    margin: 4px 0;
+    overflow: hidden;
+    background-color: $color_brand_main;
+  }
+}
+.open > .dropdown-menu {
+  display: block;
+
+  @media (max-width: $tablet) {
+    position: relative;
+  }
+}
+.open > .dropdown-toggle {
+  background-color: $color_brand_dark;
+}
+
+.navbar-bottom .open > .dropdown-menu {
+  display: flex;
+  left: 0;
+  flex-flow: row wrap;
+  right: auto;
+  width: 480px;
+
+  @media (max-width: $tablet) {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.dropdown-menu .menu-item {
+  flex: 1 0 50%;
+}
+
+// responsive nav
+.navbar-toggle {
+  position: relative;
+  float: right;
+  padding: 9px 10px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+
+  .icon-bar {
+    display: block;
+    height: 2px;
+    width: 32px;
+    background: #fff;
+    margin-bottom: 8px;
+  }
+}
+
+@media (min-width: $tablet) {
+  .navbar-toggle {
+    display:none
+  }
+}

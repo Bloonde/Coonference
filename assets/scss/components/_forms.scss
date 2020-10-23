@@ -1,0 +1,380 @@
+// main: ../style.scss
+
+$line_height_computed: floor(($typo_base_size * $typo_base_height)) !default;
+$padding_base_vertical: 6px;
+$padding_base_horizontal: 12px;
+$input_height_base: ($line_height_computed + ($padding_base_vertical * 2) + 2) !default;
+
+
+.contact-form {
+  
+  .container {
+    width: 720px;
+  }
+  
+  .form,
+  .wpcf7-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-flow: row wrap;
+    
+    .form-group {
+      margin-bottom: 16px;
+      flex: 0 0 48%;
+      
+      @media (max-width: $phone) {
+        flex: 0 0 100%;
+      }
+      
+      &.form-message,
+      &.form-check,
+      &.form-action {
+        flex: 0 0 100%;
+      }
+
+      &.form-action {
+        margin-bottom: 0;
+      }
+      
+      .btn {
+        display: block;
+        margin: 1rem auto;
+        
+        @media (max-width: $phone) {
+          margin: 1rem 0;
+          display: block;
+          width: 100%;
+        }
+      }
+    }
+  }
+} 
+
+fieldset {
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 16px;
+  font-size: 18px;
+  line-height: inherit;
+  color: $color_gray_mid;
+  border: 0;
+  border-bottom: 1px solid $color_brand_light;
+}
+
+label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: .25rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: .75rem;
+}
+
+input[type="search"] {
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 4px 0 0;
+  margin-top: 1px \9;
+  line-height: normal;
+  
+  &[disabled],
+  &.disabled,
+  fieldset[disabled] & {
+    cursor: not-allowed;
+  }
+}
+
+input[type="file"] {
+  display: block;
+}
+
+input[type="range"] {
+  display: block;
+  width: 100%;
+}
+
+select[multiple],
+select[size] {
+  height: auto;
+}
+
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+output {
+  display: block;
+  padding-top: 6px;
+  color: $color_gray_light;
+}
+
+.form-control,
+.input-text,
+select {
+  display: block;
+  width: 100%;
+  height: $input_height_base;
+  padding: $padding_base_vertical $padding_base_horizontal;
+  font-size: $typo_base_size;
+  line-height: $typo_base_height;
+  color: $color_gray_mid;
+  background-color: $color_lighter;
+  background-image: none;
+  border: 1px solid $color_brand_secondary;
+  border-radius: 0;
+  box-shadow: inset 1px 1px 1px 0px rgba($color_brand_secondary,0.2);
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+  
+  textarea:focus,
+  input[type="text"]:focus,
+  input[type="password"]:focus,
+  input[type="datetime"]:focus,
+  input[type="datetime-local"]:focus,
+  input[type="date"]:focus,
+  input[type="month"]:focus,
+  input[type="time"]:focus,
+  input[type="week"]:focus,
+  input[type="number"]:focus,
+  input[type="email"]:focus,
+  input[type="url"]:focus,
+  input[type="search"]:focus,
+  input[type="tel"]:focus,
+  input[type="color"]:focus,
+  .uneditable-input:focus {
+    border-color: $color_brand_main;
+    box-shadow: inset 1px 1px 1px 0px rgba(0,0,0,0.1);
+  }
+  
+  &::placeholder {
+    color: $color_gray_light;
+    opacity: 1;
+  }
+  
+  &::-ms-expand {
+    background-color: transparent;
+    border: 0;
+  }
+  
+  &[disabled],
+  &[readonly],
+  fieldset[disabled] & {
+    background-color: $color_gray_lighter;
+    opacity: 1;
+  }
+  
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: not-allowed;
+  }
+  
+  textarea {
+    height: auto;
+  }
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-check {
+  position: relative;
+  display: block;
+  // padding-left: 1.25rem;
+}
+
+.form-check-input {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  margin-top: .3rem;
+  margin-left: -1.25rem;
+}
+.form-check-label {
+  margin-bottom: 0;
+  text-transform: none;
+}
+
+.radio,
+.checkbox {
+  position: relative;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  
+  &.disabled,
+  fieldset[disabled] & {
+    label {
+      cursor: not-allowed;
+    }
+  }
+  
+  label {
+    min-height: 16px;
+    padding-left: 20px;
+    margin-bottom: 0;
+    font-weight: 400;
+    cursor: pointer;
+  }
+}
+.radio input[type="radio"],
+.radio-inline input[type="radio"],
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+  position: absolute;
+  margin-top: 4px \9;
+  margin-left: -20px;
+}
+
+.radio + .radio,
+.checkbox + .checkbox {
+  margin-top: -5px;
+}
+
+.radio-inline,
+.checkbox-inline {
+  position: relative;
+  display: inline-block;
+  padding-left: 20px;
+  margin-bottom: 0;
+  font-weight: 400;
+  vertical-align: middle;
+  cursor: pointer;
+  
+  &.disabled,
+  fieldset[disabled] & {
+    cursor: not-allowed;
+  }
+}
+.radio-inline + .radio-inline,
+.checkbox-inline + .checkbox-inline {
+  margin-top: 0;
+  margin-left: 10px;
+}
+
+.form-control-static {
+  min-height: (16px + $typo_base_size);
+  padding-top: ($padding_base_vertical + 1);
+  padding-bottom: ($padding_base_vertical + 1);
+  margin-bottom: 0;
+  
+  &.input-lg,
+  &.input-sm {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.has-feedback {
+  position: relative;
+  
+  .form-control {
+    padding-right: calc(#{$input_height_base} * 1.25);
+  }
+}
+
+.has-success {
+  color: $color_success;
+}
+.has-warning {
+  color: $color_warning;
+}
+.has-error {
+  color: $color_danger;
+}
+
+.has-feedback label {
+  & ~ .form-control-feedback {
+    top: (16px + 5);
+  }
+  &.sr-only ~ .form-control-feedback {
+    top: 0;
+  }
+}
+
+textarea.form-control {
+  height: auto;
+}
+
+.help-block {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 90%;
+  color: lighten($color_base, 15%);
+  display: flex;
+}
+
+.input-group {
+	position: relative;
+	display: -ms-flexbox;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: stretch;
+  width: 100%;
+  
+  & > .custom-select:not(:last-child), 
+  & > .form-control:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  & > .custom-file, 
+  & > .custom-select, 
+  & > .form-control, 
+  & > .form-control-plaintext {
+    position: relative;
+    flex: 1 1 0%;
+    min-width: 0;
+    margin-bottom: 0;
+  }
+
+  .input-group-append {
+    margin-left: -1px;
+  }
+
+  .input-group-append, 
+  .input-group-prepend {
+    display: flex;
+
+    .btn {
+      position: relative;
+      z-index: 2;
+      height: $input_height_base;
+      padding: .5rem 1.25rem;
+    }
+  }
+}
+
+div.wpcf7-response-output {
+  margin: 2em 0.5em 1em;
+  padding: 0.5em 1em;
+  border: 2px solid transparent;
+  width: 100%;
+  text-align: center;
+}
+div.wpcf7-validation-errors, div.wpcf7-acceptance-missing {
+  border: 2px solid $color_warning;
+}
+span.wpcf7-list-item {
+  margin: 0;
+}
+// .wpcf7-form-control-wrap {
+//   margin-right: .25rem;
+// }

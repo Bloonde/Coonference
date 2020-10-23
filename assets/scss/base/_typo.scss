@@ -1,0 +1,141 @@
+// main: ../style.scss
+
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,500,400i,700&display=swap');
+
+//// COLORES DE TEXTOS
+$color_text_heading: $color_base;
+$color_text: $color_gray_dark;
+$color_text_loud: darken($color_gray_dark, 15%);
+$color_text_quiet: $color_gray_mid;
+
+$color_text_link: $color_brand_main;
+$color_text_link_hover: saturate($color_brand_main, 20%);
+$color_text_link_visited: desaturate($color_brand_main, 20%);
+
+$typo_light: 300;
+$typo_regular: 400;
+$typo_semibold: 500;
+$typo_bold: 700;
+
+$typo_base: 'IBM Plex Sans','Helvetica Neue', Helvetica, Arial, sans-serif;
+$typo_base_size: 15px;
+$typo_base_weight: 400;
+$typo_base_height: 1.6;
+
+$typo_fixed: 'Roboto Mono', monospace;
+$typo_fixed_size: 16px;
+$typo_fixed_height: 1.2;
+
+$typo_serif: Georgia,'Times New Roman',Times,serif;
+$typo_serif_size: 16px;
+$typo_serif_height: 1.2;
+
+$typo_heading: $typo_base;
+$typo_heading_weight: 700;
+$typo_heading_height: 1.15;
+$typo_heading_color: $color_base;
+
+body {
+  color: $color_text;
+  font-size: $typo_base_size;
+  font-family: $typo_base;
+  font-weight: $typo_base_weight;
+  line-height: $typo_base_height;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-size-adjust: 100%;
+}
+.link {
+  cursor: pointer;
+  color: $color_brand_main;
+  text-decoration: none;
+  &:visited {
+    opacity: .9;
+  }
+  &:hover {
+    // color: $color_text_link_hover;
+    text-decoration: underline;
+    -webkit-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
+  }
+}
+.small, small {
+  // color: $color_text_quiet;
+  font-size: 85%;
+  line-height: 150%;
+  display: inline-block;
+}
+.bold  {
+  // color: $color_text_loud;
+  font-weight: $typo_bold;
+}
+.italic {
+  font-style: italic;
+}
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: $typo_heading;
+  font-weight: $typo_heading_weight;
+  line-height: $typo_heading_height;
+  // color: $typo_heading_color;
+  margin: 0 0 16px;
+}
+.h1 { font-size: 400%; }
+.h2 { font-size: 250%; }
+.h3 { font-size: 200%; }
+.h4 { font-size: 150%; }
+.h5 { font-size: 125%; }
+.h6 { font-size: 100%; }
+
+.block-margins { margin: 0 0 16px 0; }
+
+.unordered-list { list-style-type: disc; }
+.ordered-list { list-style: decimal; }
+
+a { @extend .link; }
+
+i, em { @extend .italic; }
+b, strong { @extend .bold; }
+
+h1 { @extend .h1; }
+h2 { @extend .h2; }
+h3 { @extend .h3; }
+h4 { @extend .h4; }
+h5 { @extend .h5; }
+h6 { @extend .h6; }
+
+ul, ol, pre { @extend .block-margins; }
+
+p + p, .list-content li + li { margin-top: 16px; margin-bottom: 0; }
+
+.lead { font-size: 133%; }
+
+ul { @extend .unordered-list; padding-left: 24px; }
+ol { @extend .ordered-list; }
+
+span {
+  font-style: inherit;
+  font-weight: inherit;
+}
+
+hr {
+  border: 0;
+  border-bottom: 1px dashed $color_gray_light;
+  // margin: 20px 0;
+  margin: 0;
+}
+
+code,
+pre {
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: auto;
+  font-family: $typo_fixed;
+}
+
+abbr, acronym {
+  text-decoration: none;
+  border-bottom: 1px dotted $color_gray_light;
+  cursor: help;
+}
+
+
+// FIXME: typo a rem en todo el proyecto
