@@ -3,15 +3,10 @@
 .header-main {
   background-color: $color_brand_main;
   
-  .navbar-top,
-  .navbar-bottom,
-  .navbar-nav {
-    display: flex;
-    flex-direction: row;
-    
-    @media (max-width: $tablet) {
-      flex-flow: column nowrap;
-    }
+  display: flex;
+  flex-direction: row;
+  @media (max-width: $tablet) {
+    flex-flow: column nowrap;
   }
   
   .navbar-top {

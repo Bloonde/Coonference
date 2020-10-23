@@ -33,22 +33,5 @@
 @import 'mixins/utilities';
 
 //// DEBUG
-// div { outline: 1px dotted #cc0 }
-// body {
-//   height: 3626px;
-// }
-// body::before {
-//   content: '';
-//   display: block;
-//   position: absolute;
-//   width: 1920px;
-//   height: 3626px;
-//   opacity: .15;
-//   top: 0;
-//   left: 50%;
-//   pointer-events: none;
-//   transform: translateX(-50%);
-//   background-image: url(assets/img/Home-wireframe-desktop.png);
-//   background-position: top center;
-//   background-repeat: no-repeat;
-// }
+// * { outline: 1px dotted #cc0 }
+

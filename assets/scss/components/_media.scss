@@ -1,30 +1,21 @@
 // main: ../style.scss
 
-.frame {
-  position: relative;
-  display: block;
-  z-index: 1;
+.media {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
 
-  &::before {
-    border: 1px solid $color_brand_main;
-    content: '';
-    display: block;
-    height: 100%;
-    left: -10px;
-    position: absolute;
-    top: -10px;
-    width: 100%;
-    z-index: 1;
-  }
-  &::after {
-    background: transparent url(assets/img/pattern/pattern-dots.png) repeat top left;
-    content: '';
-    display: block;
-    height: 100%;
-    left: 10px;
-    position: absolute;
-    top: 10px;
-    width: 100%;
-    z-index: -1;
-  }
+.media::after {
+	padding-top: 56.25%;
+	display: block;
+	content: '';
+}
+
+.media iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }

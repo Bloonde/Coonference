@@ -1,112 +1,36 @@
 // main: ../style.scss
 
-.container {
+.main-content {
   position: relative;
-  margin: 0 auto;
-  width: 1024px;
-  max-width: 92%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+  "banner banner banner sidebar"
+  "main main main sidebar"
+  "footer footer footer sidebar";
 
-  // @include respond-to('phone', max) {
-  //   width: calc(100% - (#{$gap} * 2));
-  // }
-  // @include respond-to('phone') {
-  //   width: calc(100% - (#{$gap} * 4));
-  // }
-  // @include respond-to('desktop', min) {
-  //   max-width: $desktop;
-  //   max-height: $tablet;
-  // }
-  // outline: 1px dotted red;
-}
-
-.section {
-  padding: 3rem 0;
-}
-
-.columns {
-  flex-wrap: nowrap;
-  display: flex;
-  margin-bottom: 16px;
-  justify-content: space-between;
-
-  @media (max-width: $phone) {
-    flex-direction: column;
-  }
-
-  .column {
-    flex-basis: calc(33% - 16px);
-    max-width: 300px;
-    flex-grow: 1;
-    min-width: 0;
-    word-break: break-word;
-    overflow-wrap: break-word;
-
-    @media (max-width: $phone) {
-      max-width: 100%;
-    }
-
-  }
-  .column:not(:first-child) {
-    margin-left: 32px;
-
-    @media (max-width: $phone) {
-      margin: 0 0 32px;
-    }
+  @media (max-width: $tablet) {
+    grid-template-areas: 
+    "banner banner banner banner"
+    "main main main main"
+    "sidebar sidebar sidebar sidebar"
+    "footer footer footer footer";
   }
 }
 
-.flex-full {
-  justify-content: space-around;
-}
-.flex-start {
-  justify-content: flex-start;
+.banner {
+	grid-area: banner;
 }
 
-.page-id-19 {
-  .block-cols-2 {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: baseline;
-
-    @media (max-width: $phone) {
-      display: block;
-    }
-
-    > * {
-      flex: 1;
-
-      &:first-child {
-        flex: 0 1 33%;
-        padding-right: 3rem;
-      }
-    }
-  }
+.video-container {
+	grid-area: main;
 }
 
-.row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 3rem;
-
-  @media (max-width: $phone) {
-    display: block;
-  }
-
-  .col {
-    flex: 0 1 50%;
-  }
+.chat-container {
+	grid-area: sidebar;
 }
 
-.page-id-17 {
-  .block-cols-2 {
-    width: 50%;
-    margin-top: 5rem;
-
-    @media (max-width: $phone) {
-      width: 100%;
-    }
-  }
+.footer-main {
+	grid-area: footer;
 }

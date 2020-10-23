@@ -1,7 +1,11 @@
 // main: ../style.scss
 
-.navbar-nav  {
+.navbar  {
   margin: 0;
+  display: flex;
+  margin-left: auto;
+  list-style: none;
+  padding: 0;
 
   .dropdown-toggle {
     display: flex;
@@ -27,7 +31,7 @@
     }
   }
 
-  & > .menu-item > a {
+  & > li > a {
     text-decoration: none;
     display: inline-block;
     color: $color_lighter;

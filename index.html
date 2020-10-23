@@ -8,11 +8,36 @@
 	</head>
 	<body>
 		<div class="app">
-			<header class="main"></header>
-			<main class="content">
-				<div class="banner"></div>
-				<div class="video-container"></div>
-				<div class="chat-container"></div>
+			<header class="header-main">
+				<picture class="logo">
+					<source media="(max-width: 768px)" srcset="./assets/img/logo-sm.svg" />
+					<source media="(min-width: 769px)" srcset="./assets/img/logo-lg.svg" />
+					<img src="./assets/img/logo-lg.svg" alt="Company" />
+				</picture>
+				<ul class="navbar">
+					<li><a href="#">Inicio</a></li>
+					<li><a href="#">Contacto</a></li>
+					<li><a href="#">Mi cuenta</a></li>
+					<li><a href="#">FAQs</a></li>
+				</ul>
+			</header>
+			<main class="main-content">
+				<div class="banner">
+					<p class="overline">Online Conference</p>
+					<h1 class="banner-title">#enlightED: metodologías ágiles</h1>
+				</div>
+				<div class="video-container">
+					<div class="media">
+						<iframe
+							src="https://www.youtube.com/embed/qm0IfG1GyZU"
+							frameborder="0"
+							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen
+						></iframe>
+					</div>
+				</div>
+				<div class="chat-container">chat</div>
+				<footer class="footer-main">footer</footer>
 			</main>
 		</div>
 	</body>
