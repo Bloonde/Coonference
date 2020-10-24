@@ -10,7 +10,8 @@
 		<div class="app">
 			<header class="header-main">
 				<picture class="logo">
-					<source media="(max-width: 768px)" srcset="./assets/img/logo-sm.svg" />
+					<source media="(max-width: 480px)" srcset="./assets/img/logo-sm.svg" />
+					<source media="(max-width: 768px)" srcset="./assets/img/logo-md.svg" />
 					<source media="(min-width: 769px)" srcset="./assets/img/logo-lg.svg" />
 					<img src="./assets/img/logo-lg.svg" alt="Company" />
 				</picture>
@@ -36,20 +37,30 @@
 						></iframe>
 					</div>
 					<div class="description">
-						<h2>Google Chrome Developers</h2>
-						<p>
-							In this dynamic talk, Una goes over the power of modern CSS layout techniques by highlighting a few key
-							terms and how much detail can be described in a single line of code. Learn a few layout tricks you can
-							implement in your codebase today, and be able to write entire swaths of layout with just a few lines of
-							code.
-						</p>
-						<p>
-							Resource: Check out the demo website: 1-Line Layouts →
-							<a href="https://goo.gle/2ViY1KE">https://goo.gle/2ViY1KE</a>
-						</p>
+						<details>
+							<summary>Recursos</summary>
+							<div class="content">
+								<h2>Google Chrome Developers</h2>
+								<p>
+									In this dynamic talk, Una goes over the power of modern CSS layout techniques by highlighting a few
+									key terms and how much detail can be described in a single line of code. Learn a few layout tricks you
+									can implement in your codebase today, and be able to write entire swaths of layout with just a few
+									lines of code.
+								</p>
+								<p>
+									Resource: Check out the demo website: 1-Line Layouts →
+									<a href="https://goo.gle/2ViY1KE">https://goo.gle/2ViY1KE</a>
+								</p>
+							</div>
+						</details>
 					</div>
 				</div>
 				<div class="chat-container">
+					<div class="btn-group message-selector" role="group" aria-label="Basic example">
+						<button type="button" class="btn btn-tab active">Todos</button>
+						<button type="button" class="btn btn-tab">Ponentes</button>
+						<button type="button" class="btn btn-tab">Usuarios</button>
+					</div>
 					<ul class="conversation-list">
 						<li class="message message-admin">
 							<div class="message-data">
@@ -65,18 +76,63 @@
 							</div>
 							<div class="message-content">I've never been more ashamed in the lack of my CSS knowledge 😭</div>
 						</li>
+						<li class="message message-user">
+							<div class="message-data">
+								<span class="author">Valentine Bott</span>
+								<span class="time">Hace 1 min.</span>
+							</div>
+							<div class="message-content">I've never been more ashamed in the lack of my CSS knowledge 😭</div>
+						</li>
+						<li class="message message-user">
+							<div class="message-data">
+								<span class="author">Valentine Bott</span>
+								<span class="time">Hace 1 min.</span>
+							</div>
+							<div class="message-content">I've never been more ashamed in the lack of my CSS knowledge 😭</div>
+						</li>
+						<li class="message message-user">
+							<div class="message-data">
+								<span class="author">Valentine Bott</span>
+								<span class="time">Hace 1 min.</span>
+							</div>
+							<div class="message-content">I've never been more ashamed in the lack of my CSS knowledge 😭</div>
+						</li>
+						<li class="message message-user">
+							<div class="message-data">
+								<span class="author">Valentine Bott</span>
+								<span class="time">Hace 1 min.</span>
+							</div>
+							<div class="message-content">I've never been more ashamed in the lack of my CSS knowledge 😭</div>
+						</li>
+						<li class="message message-user">
+							<div class="message-data">
+								<span class="author">Valentine Bott</span>
+								<span class="time">Hace 1 min.</span>
+							</div>
+							<div class="message-content">I've never been more ashamed in the lack of my CSS knowledge 😭</div>
+						</li>
 					</ul>
 					<form class="message-box">
-						<label class="sr-only" for="message">Envía tu pregunta o comentario al ponente</label>
-						<textarea
-							name="message"
-							id="message"
-							cols="30"
-							rows="10"
-							placeholder="Envía tu pregunta o comentario al ponente"
-						></textarea>
-						<small class="message-counter">0/250</small>
-						<button type="submit">Enviar</button>
+						<div class="form-group">
+							<label class="sr-only" for="message">Envía tu pregunta o comentario al ponente</label>
+							<textarea
+								class="form-control"
+								name="message"
+								id="message"
+								placeholder="Envía tu pregunta o comentario al ponente"
+							></textarea>
+						</div>
+						<div class="form-actions">
+							<small class="message-counter text-muted">0/250</small>
+							<button class="btn btn-icon" type="submit">
+								<svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+									<polygon
+										fill="#004157"
+										points="12 0 9.877 2.123 18.255 10.5 0 10.5 0 13.5 18.255 13.5 9.877 21.878 12 24 24 12"
+									/>
+								</svg>
+							</button>
+						</div>
 					</form>
 				</div>
 				<footer class="footer-main">footer</footer>

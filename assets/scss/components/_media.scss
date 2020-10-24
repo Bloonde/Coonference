@@ -1,5 +1,17 @@
 // main: ../style.scss
 
+img,
+video {
+	display: block;
+	height: auto;
+	max-width: 100%;
+}
+
+iframe {
+	display: block;
+	max-width: 100%;
+}
+
 .media {
 	overflow: hidden;
 	position: relative;

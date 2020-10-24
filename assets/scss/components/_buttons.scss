@@ -46,6 +46,10 @@
   width: 100%;
 }
 
+.btn-icon {
+	padding: 4px;
+}
+
 .btn-link {
   background-color: transparent;
   box-shadow: none;
@@ -240,4 +244,14 @@
   border-top: 4px solid\9;
   border-right: 4px solid transparent;
   border-left: 4px solid transparent;
+}
+
+.btn-group {
+	position: relative;
+	display: inline-flex;
+  align-items: center;
+  
+  .btn {
+    flex: 1;
+  }
 }
