@@ -3,8 +3,9 @@
 	background-color: $color_lighter;
 	display: flex;
 	flex-direction: column;
-	box-shadow: -8px 0 8px 0 rgba(0, 0, 0, 0.15);
+	box-shadow: -8px 0 8px 0 rgba(0, 0, 0, 0.1);
 	transition: height 0ms ease;
+	z-index: 1;
 }
 
 .message-selector {
