@@ -1,11 +1,36 @@
 .chat-container {
 	height: calc(100vh - 52px);
+	background-color: $color_lighter;
 	display: flex;
 	flex-direction: column;
+	box-shadow: -8px 0 8px 0 rgba(0, 0, 0, 0.15);
+	transition: height 0ms ease;
 }
 
 .message-selector {
 	border-bottom: 1px solid #EEF0F5;
+
+	.btn {
+		position: relative;
+
+		&:hover {
+			background-color: lighten($color_brand_main, 80%);
+		}
+		
+		&.active::after {
+			background: none repeat scroll 0 0 transparent;
+			bottom: -1px;
+			content: '';
+			display: block;
+			height: 2px;
+			left: 0;
+			position: absolute;
+			background: lighten($color_brand_main, 25%);
+			transition: width 0.3s ease 0s, left 0.3s ease 0s;
+			width: 100%;
+		}
+
+	}
 }
 
 .conversation-list {
@@ -18,6 +43,9 @@
 	
 	.message {
 		margin-bottom: 1rem;
+		display: flex;
+		flex-flow: nowrap column;
+		align-items: flex-start;
 	}
 	
 	.message-data {
@@ -41,7 +69,7 @@
 	.message-content {
 		background-color: #F5F5F7;
 		border-radius: 0 8px 8px 8px;
-		padding: .66rem 1.33rem;
+		padding: .5rem 1rem;
 		color: #5A6572;
 		display: inline-block;
 		position: relative;
@@ -50,6 +78,7 @@
 	}
 	
 	.message-admin {
+		align-items: flex-end;
 		
 		.message-data {
 			flex-direction: row-reverse;
@@ -57,11 +86,10 @@
 		
 		.message-content {
 			border-radius: 8px 0 8px 8px;
-			background-color: #0098CC;
+			background-color: lighten($color_brand_main, 25%);
 			color: #fff;
 		}
 	}
-	
 }
 
 .message-box {
@@ -86,7 +114,7 @@
 		box-shadow: none;
 		padding: $gap;
 		resize: none;
-		height: 7rem;
+		height: 5rem;
 
 		&:focus {
 			box-shadow: none;

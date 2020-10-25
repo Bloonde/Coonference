@@ -1,12 +1,33 @@
 // main: ../style.scss
 
 .banner {
-  padding: $gap $gap * 1.5;
-  background-color: $color_brand_accent;
-  
-  .banner-title {
-    font-size: 1.5rem;
-    font-weight: 500;
-    margin-bottom: .5rem;
-  }
+	padding: $gap $gap * 1.5;
+	background-color: $color_brand_accent;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	
+	.banner-title {
+		font-size: 1.5rem;
+		font-weight: 500;
+		margin: 0;
+	}
+}
+
+.stat {
+	position: relative;
+	display: flex;
+	align-items: center;
+	opacity: .66;
+
+	.icon {
+		color: $color_brand_main;
+		width: 18px;
+
+		& + .tag {
+			margin-left: .25rem;
+			color: $color_brand_main;
+		}
+	}
+
 }
