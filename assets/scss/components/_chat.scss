@@ -12,6 +12,9 @@
 
 	.btn {
 		position: relative;
+		color: $color_gray_lighter;
+		text-transform: uppercase;
+		font-size: 75%;
 
 		&:hover {
 			background-color: lighten($color_brand_main, 80%);
