@@ -8,6 +8,9 @@
 @import 'base/typo';
 @import 'base/generic';
 
+//// PLUGINS
+@import 'plugins/simplebar';
+
 //// LAYOUT
 @import 'layout/structure';
 
@@ -27,7 +30,6 @@
 @import 'components/nav';
 @import 'components/panel';
 @import 'components/tag';
-
 
 //// UTILIES
 @import 'utilies/animations';

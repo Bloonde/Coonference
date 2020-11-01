@@ -1,36 +1,55 @@
 // main: ../style.scss
 
-.main-content {
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr) 1fr;
-  grid-template-rows: auto;
-  grid-template-areas: 
-  "banner banner banner sidebar"
-  "main main main sidebar"
-  "footer footer footer sidebar";
-
-  @media (max-width: $tablet) {
-    grid-template-areas: 
-    "banner banner banner banner"
-    "main main main main"
-    "sidebar sidebar sidebar sidebar"
-    "footer footer footer footer";
-  }
+.app {
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr) 1fr;
+	grid-template-rows: auto;
+	grid-template-areas: 
+	'header header header header'
+	'main main main sidebar';
+	
+	@media (max-width: $tablet) {
+		grid-template-areas: 
+		'header'
+		'main'
+		'sidebar'
+	}
 }
 
-.banner {
-	grid-area: banner;
+.header-main {
+	grid-area: header;
 }
 
-.video-container {
+.main {
 	grid-area: main;
 }
 
-.chat-container {
+.sidebar {
 	grid-area: sidebar;
 }
 
-.footer-main {
-	grid-area: footer;
+.main,
+.sidebar {
+	height: calc(100vh - 52px);
+	scrollbar-width: thin;
+	overflow-y: auto;
+}
+
+// .main {
+// 	overflow: auto;
+// 	visibility: hidden;
+// 	transition: visibility 0.2s;
+// }
+
+// .content,
+// .main:hover,
+// .main:focus {
+// 	visibility: visible;
+// 	transition: visibility 0s 0.2s;
+// }
+
+.simplebar-scrollbar.simplebar-visible::before {
+	opacity: .33;
+	width: 6px;
 }

@@ -1,22 +1,28 @@
 .chat-container {
-	height: calc(100vh - 52px);
+	height: 100%;
 	background-color: $color_lighter;
 	display: flex;
 	flex-direction: column;
 	box-shadow: -8px 0 8px 0 rgba(0, 0, 0, 0.1);
 	transition: height 0ms ease;
 	z-index: 1;
+	overflow: hidden;
+	border-left: 1px solid #EEF0F5;
 }
 
 .message-selector {
 	border-bottom: 1px solid #EEF0F5;
-
+	height: 40px;
+	flex-grow: 0;
+	flex-shrink: 0;
+	flex-basis: 40px;
+	
 	.btn {
 		position: relative;
 		color: $color_gray_lighter;
 		text-transform: uppercase;
 		font-size: 75%;
-
+		
 		&:hover {
 			background-color: lighten($color_brand_main, 80%);
 		}
@@ -33,11 +39,12 @@
 			transition: width 0.3s ease 0s, left 0.3s ease 0s;
 			width: 100%;
 		}
-
+		
 	}
 }
 
 .conversation-list {
+	height: calc(100% - 200px);
 	list-style: none;
 	padding: $gap;
 	flex: 1 1 auto;
@@ -50,24 +57,24 @@
 		display: flex;
 		flex-flow: nowrap column;
 		align-items: flex-start;
-	}
-	
-	.message-data {
-		display: flex;
-		align-items: baseline;
-	}
-	
-	.time {
-		font-size: 12px;
-		color: #B0C0CE;
-	}
-	
-	.author {
-		font-weight: 500;
-	}
-	
-	.time {
-		margin: 0 .5rem;
+		
+		.message-data {
+			display: flex;
+			align-items: baseline;
+		}
+		
+		.time {
+			font-size: 12px;
+			color: #B0C0CE;
+		}
+		
+		.author {
+			font-weight: 500;
+		}
+		
+		.time {
+			margin: 0 .5rem;
+		}
 	}
 	
 	.message-content {
@@ -100,7 +107,11 @@
 	margin-top: auto;
 	border-top: 1px solid #EEF0F5;
 	position: relative;
-
+	max-height: 160px;
+	flex-grow: 0;
+	flex-shrink: 0;
+	flex-basis: 160px;
+	
 	&::before {
 		display: block;
 		content: '';
@@ -112,25 +123,28 @@
 		background: linear-gradient(to top, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
 		right: auto;
 	}
-
+	
+	.form-group {
+		margin: 0;
+	}
 	.form-control {
 		border: none;
 		box-shadow: none;
-		padding: $gap;
+		padding: $gap $gap 0;
 		resize: none;
-		height: 5rem;
-
+		height: 6rem;
+		
 		&:focus {
 			box-shadow: none;
 			outline: none;
 		}
 	}
-
+	
 	.form-actions {
 		padding: $gap;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 	}
-
+	
 }

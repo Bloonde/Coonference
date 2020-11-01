@@ -16,21 +16,21 @@ html, body {
 	width: 100%;
 }
 
-.app {
-	overflow-x: hidden;
-	overflow-y: auto;
-	align-content: stretch;
-	align-items: stretch;
-	display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	justify-content: flex-start;
-	min-height: 100vh;
+// .app {
+// 	overflow-x: hidden;
+// 	overflow-y: auto;
+// 	align-content: stretch;
+// 	align-items: stretch;
+// 	display: flex;
+// 	flex-direction: column;
+// 	flex-wrap: nowrap;
+// 	justify-content: flex-start;
+// 	min-height: 100vh;
 	
-	& > .main {
-		flex: 1;
-	}
-}
+// 	& > .main {
+// 		flex: 1;
+// 	}
+// }
 
 .tag {
 	background-color: $color_brand_accent;
