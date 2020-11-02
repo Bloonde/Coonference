@@ -1,0 +1,51 @@
+@import '../base/variables';
+
+.message {
+	margin-bottom: 1rem;
+	display: flex;
+	flex-flow: nowrap column;
+	align-items: flex-start;
+	
+	.message-data {
+		display: flex;
+		align-items: baseline;
+	}
+	
+	.time {
+		font-size: 12px;
+		color: #B0C0CE;
+	}
+	
+	.author {
+		font-weight: 500;
+	}
+	
+	.time {
+		margin: 0 .5rem;
+	}
+	
+	.message-content {
+		background-color: #F5F5F7;
+		border-radius: 0 8px 8px 8px;
+		padding: .5rem 1rem;
+		color: #5A6572;
+		display: inline-block;
+		position: relative;
+		margin-bottom: .5rem;
+		max-width: 90%;
+	}
+	
+	.message-admin {
+		align-items: flex-end;
+		
+		.message-data {
+			flex-direction: row-reverse;
+		}
+		
+		.message-content {
+			border-radius: 8px 0 8px 8px;
+			background-color: lighten($color_brand_main, 25%);
+			color: #fff;
+		}
+	}
+}

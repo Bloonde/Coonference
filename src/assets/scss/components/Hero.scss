@@ -1,4 +1,8 @@
-// main: ../style.scss
+@import '../base/variables';
+
+.hero {
+	grid-column: 1 / span 4;
+}
 
 .banner {
 	padding: $gap $gap * 1.5;
