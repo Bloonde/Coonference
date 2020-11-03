@@ -9,7 +9,7 @@ class ChatForm extends React.Component {
 		return (
 			<form className="message-box">
 				<div className="form-group">
-					<label className="sr-only" for="message">Envía tu pregunta o comentario al ponente</label>
+					<label className="sr-only" htmlFor="message">Envía tu pregunta o comentario al ponente</label>
 					<textarea
 						className="form-control"
 						name="message"

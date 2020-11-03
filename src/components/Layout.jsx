@@ -6,8 +6,10 @@ const Layout = (props) => {
 	const children = props.children;
 	return (
 		<>
-		<Navbar />
-		{children}
+			<Navbar />
+			<main className="main">
+				{children}
+			</main>
 		</>
 	);
 };

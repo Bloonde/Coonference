@@ -20,13 +20,14 @@ class Navbar extends React.Component {
 					</picture>
 				</Link>
 				<ul className="navbar">
-					<li><a href="#">Inicio</a></li>
-					<li><a href="#">Contacto</a></li>
-					<li><a href="#">FAQs</a></li>
+					<li><Link to="/login">Login</Link></li>
+					<li><Link to="/register">Register</Link></li>
+					<li><Link to="/contact">Contacto</Link></li>
+					<li><Link to="/faqs">FAQs</Link></li>
 					<li>
-						<a href="#">
+						<Link to="/account">
 							<img className="icon" src={Account} />
-						</a>
+						</Link>
 					</li>
 				</ul>
 			</header>

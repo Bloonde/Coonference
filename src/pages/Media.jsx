@@ -4,6 +4,7 @@ import SimpleBar from 'simplebar-react';
 
 import '../assets/scss/components/Media.scss';
 
+import Layout from '../components/Layout';
 import Chat from '../components/Chat';
 import Footer from '../components/Footer';
 import Hero from '../components/Hero';
@@ -11,8 +12,7 @@ import Hero from '../components/Hero';
 class Media extends React.Component {
 	render() {
 		return (
-			<>
-				<main className="main">
+			<Layout>
 					<Hero />
 					<div className="video-container">
 						<div className="media">
@@ -39,9 +39,8 @@ class Media extends React.Component {
 						</div>
 					</div>
 					<Footer />
-				</main>
 				<Chat />
-			</>
+			</Layout>
 		);
 	};
 };

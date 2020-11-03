@@ -2,6 +2,7 @@ import React from 'react';
 
 import '../assets/scss/pages/Home.scss';
 
+import Layout from '../components/Layout';
 import Hero from '../components/Hero';
 import Footer from '../components/Footer';
 import MediaList from '../components/MediaList';
@@ -49,13 +50,13 @@ class Home extends React.Component {
 	};
 	render(){
 		return (
-			<main class="main">
+			<Layout>
 				<Hero />
 				<section className="media-row">
 					<MediaList items={this.state.data} />
 				</section>
 				<Footer />
-			</main>
+			</Layout>
 		);
 	};
 };

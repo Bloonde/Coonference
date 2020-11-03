@@ -1,17 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import '../assets/scss/pages/Login.scss';
-
-import InputText from '../components/InputText';
+// import '../assets/scss/pages/Register.scss';
 
 class Register extends React.Component {
 	render() {
 		return (
-			<div className="login">
-				<InputText />
-				<Link to="/"></Link>
-			</div>
+			<>
+			<h1>Register</h1>
+			<Link to="/">Home</Link>
+			</>
 		);
 	};
 };
