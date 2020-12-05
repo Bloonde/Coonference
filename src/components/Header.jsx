@@ -1,17 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import '../assets/scss/components/Navbar.scss';
+import '../assets/scss/components/Header.scss';
 import logoSm from '../assets/img/logo-sm.svg';
 import logoMd from '../assets/img/logo-md.svg';
 import logoLg from '../assets/img/logo-lg.svg';
 import Account from '../assets/img/Account.svg';
 
-class Navbar extends React.Component {
+class Header extends React.Component {
 	render() {
 		return (
-			<header className="header-main" id="header">
-				<Link className="navbar-brand" to="/">
+			<header className="header" id="header">
+				<Link className="Header-brand" to="/">
 					<picture className="logo">
 						<source media="(max-width: 480px)" srcSet={logoSm} />
 						<source media="(max-width: 768px)" srcSet={logoMd} />
@@ -19,7 +19,7 @@ class Navbar extends React.Component {
 						<img src={logoLg} alt="Company" />
 					</picture>
 				</Link>
-				<ul className="navbar">
+				<ul className="Header">
 					<li><Link to="/login">Login</Link></li>
 					<li><Link to="/register">Register</Link></li>
 					<li><Link to="/contact">Contacto</Link></li>
@@ -35,4 +35,4 @@ class Navbar extends React.Component {
 	};
 };
 
-export default Navbar;
+export default Header;

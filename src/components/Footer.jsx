@@ -6,7 +6,7 @@ import '../assets/scss/components/Footer.scss';
 class Footer extends React.Component {
 	render() {
 		return (
-			<footer className="footer-main">
+			<footer className="footer">
 				<div className="copy">
 					<small>&copy; 2020 <Link to="#">Bloonde</Link></small>
 					<small><Link to="#">Aviso legal</Link></small>

@@ -1,7 +1,7 @@
 @import '../base/variables';
 
 // Header
-.header-main {
+.header {
 	background-color: $color_brand_main;
 	display: flex;
 	flex-direction: row;
@@ -13,7 +13,7 @@
 		flex-flow: column nowrap;
 	}
 	
-	.navbar-nav {
+	.Header-nav {
 		list-style: none;
 		justify-content: flex-end;
 		padding: 0;
@@ -36,7 +36,7 @@
 		}
 	}
 	
-	.navbar-brand {
+	.Header-brand {
 		display: block;
 		object-fit: contain;
 	}
@@ -44,17 +44,17 @@
 
 @media (max-width: $tablet) {
 	
-	.navbar-header {
+	.Header-header {
 		width: 100%;
 	}
-	.header-main .navbar-brand {
+	.header .Header-brand {
 		margin-top: 1rem;
 	}
 	
 }
 
-// Navbar
-.navbar {
+// Header
+.Header {
 	margin: 0;
 	display: flex;
 	margin-left: auto;
@@ -104,7 +104,7 @@
 }
 
 // responsive nav
-.navbar-toggle {
+.Header-toggle {
 	position: relative;
 	float: right;
 	padding: 9px 10px;
@@ -126,7 +126,7 @@
 }
 
 @media (min-width: $tablet) {
-	.navbar-toggle {
+	.Header-toggle {
 		display: none
 	}
 }
