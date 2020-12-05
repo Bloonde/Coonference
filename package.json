@@ -1,7 +1,7 @@
 {
-	"name": "platzi-badges",
+	"name": "coonference",
 	"version": "0.1.0",
-	"description": "Conf badge creation app",
+	"description": "Online conference app",
 	"private": true,
 	"main": "index.js",
 	"author": "@albrtogarcia",
