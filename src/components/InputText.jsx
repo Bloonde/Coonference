@@ -3,7 +3,7 @@ import React from "react";
 const TextInput = props => {
 	return (
 		<div className="form-group">
-			<label className="sr-only" for={props.id}>{label}</label>
+			<label className="sr-only" htmlFor={props.id}>{label}</label>
 			<input
 			className="form-control"
 				type="text"
